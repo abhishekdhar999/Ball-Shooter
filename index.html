@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: 0;
+            background: black;
+        }
+        .wrapper {
+  position: relative;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  pointer-events: none;
+  /* border: 2px solid red; */
+}
+.screen{
+    position: relative;
+     display: flex; 
+     justify-content: center;
+   align-items: center;
+   /* display: none; */
+}
+.box{
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   border-radius: 20px;
+
+    /* margin: auto; */
+}
+.btn{
+    margin-top: 10px;
+    width: 300px;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper user-select-none">
+        <!-- <canvas id="canvas" width=640 height=480></canvas> -->
+        <div class="overlay ">
+          <span class="score-text">Score : <span id="scoreEl">0</span></span>
+        </div>
+      </div>
+      <div class="screen user-select-none   " id="modelEl">
+        <div class="box ">
+            <div class="box-item my-4">
+                <h2><span id="big-score">0</span></h2>
+                <h5>Points</h5>
+               <div class="btn btn-primary" id="start-game-btn">Start Game</div>
+            </div>
+      </div>
+      </div>
+      
+    <canvas></canvas>
+   
+    
+    <script src="ball-shooter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
